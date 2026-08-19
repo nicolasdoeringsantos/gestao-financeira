@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+  color: #e2e8f0;
+  background-color: #0b1220;
+  background-image:
+    radial-gradient(1200px 800px at 75% -10%, rgba(59, 130, 246, 0.08), transparent 60%),
+    radial-gradient(1000px 700px at 0% 100%, rgba(139, 92, 246, 0.06), transparent 60%),
+    radial-gradient(900px 600px at 100% 100%, rgba(16, 185, 129, 0.05), transparent 60%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 8px;
+  border: 2px solid #0b1220;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+html.light body {
+  color-scheme: light;
+  color: #334155;
+  background-color: #f1f5f9;
+  background-image: radial-gradient(
+      1200px 800px at 75% -10%,
+      rgba(59, 130, 246, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(1000px 700px at 0% 100%, rgba(139, 92, 246, 0.06), transparent 60%),
+    radial-gradient(900px 600px at 100% 100%, rgba(16, 185, 129, 0.05), transparent 60%);
+  background-attachment: fixed;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border: 2px solid #f1f5f9;
+}
+
+html.light .bg-\[\#0b1220\]\/80 {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900 {
+  background-color: #ffffff;
+}
+html.light .bg-slate-950\/50,
+html.light .bg-slate-950\/90 {
+  background-color: #f8fafc;
+}
+html.light .bg-slate-800,
+html.light .bg-slate-800\/50,
+html.light .bg-slate-800\/40 {
+  background-color: #eef2f7;
+}
+html.light .hover\:bg-slate-800\/70:hover,
+html.light .hover\:bg-slate-800\/40:hover,
+html.light .hover\:bg-slate-800:hover,
+html.light .hover\:bg-slate-700\/50:hover,
+html.light .hover\:bg-slate-900:hover {
+  background-color: #e2e8f0;
+}
+
+html.light .border-slate-800,
+html.light .border-slate-800\/80 {
+  border-color: #e2e8f0;
+}
+html.light .border-slate-700,
+html.light .border-slate-700\/70,
+html.light .border-slate-600 {
+  border-color: #cbd5e1;
+}
+html.light .hover\:border-slate-700:hover {
+  border-color: #94a3b8;
+}
+html.light .hover\:border-slate-500:hover {
+  border-color: #64748b;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200 {
+  color: #0f172a;
+}
+html.light .text-slate-300 {
+  color: #334155;
+}
+html.light .text-slate-400 {
+  color: #475569;
+}
+html.light .text-slate-500 {
+  color: #64748b;
+}
+html.light .placeholder-slate-500::placeholder {
+  color: #94a3b8;
+}
+html.light .hover\:text-slate-200:hover {
+  color: #0f172a;
+}
+html.light .hover\:text-slate-300:hover {
+  color: #334155;
+}
+
+html.light .text-emerald-400,
+html.light .text-emerald-300 {
+  color: #059669;
+}
+html.light .text-rose-400,
+html.light .text-rose-300 {
+  color: #e11d48;
+}
+html.light .text-amber-400 {
+  color: #b45309;
+}
+html.light .text-blue-400,
+html.light .hover\:text-blue-400:hover {
+  color: #2563eb;
+}
+html.light .hover\:text-blue-300:hover {
+  color: #1d4ed8;
+}
+html.light .text-purple-400 {
+  color: #7c3aed;
+}
+html.light .text-teal-400 {
+  color: #0d9488;
+}
+html.light .text-sky-400 {
+  color: #0284c7;
+}
+html.light .hover\:text-rose-400:hover {
+  color: #e11d48;
+}
+
+html.light .from-blue-400.via-indigo-400.to-purple-400 {
+  background-image: linear-gradient(to right, #1d4ed8, #4338ca 50%, #7e22ce);
+}
+
+html.light .shadow-black\/20 {
+  box-shadow:
+    0 10px 15px -3px rgba(15, 23, 42, 0.06),
+    0 4px 6px -4px rgba(15, 23, 42, 0.05);
+}
+html.light .shadow-black\/40 {
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.12);
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+@media (max-width: 640px) {
+  table {
+    font-size: 0.8125rem;
+  }
+  table th,
+  table td {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}

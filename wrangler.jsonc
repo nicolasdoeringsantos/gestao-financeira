@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "gestao-financeira",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gestao-financeira-db",
+      "database_id": "d840ccb6-c5c5-4d7c-9fc2-5fa263621904",
+      "migrations_dir": "./migrations"
+    }
+  ]
+}
