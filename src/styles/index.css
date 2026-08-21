@@ -17,8 +17,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -30,6 +30,14 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.4);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -45,59 +53,72 @@ input[type="number"] {
 html.light body {
   color-scheme: light;
   color: #334155;
-  background-color: #f1f5f9;
+  background-color: #f8fafc;
   background-image: radial-gradient(
       1200px 800px at 75% -10%,
-      rgba(59, 130, 246, 0.08),
+      rgba(59, 130, 246, 0.06),
       transparent 60%
     ),
-    radial-gradient(1000px 700px at 0% 100%, rgba(139, 92, 246, 0.06), transparent 60%),
-    radial-gradient(900px 600px at 100% 100%, rgba(16, 185, 129, 0.05), transparent 60%);
+    radial-gradient(1000px 700px at 0% 100%, rgba(139, 92, 246, 0.04), transparent 60%),
+    radial-gradient(900px 600px at 100% 100%, rgba(16, 185, 129, 0.04), transparent 60%);
   background-attachment: fixed;
 }
 html.light ::-webkit-scrollbar-thumb {
   background: rgba(100, 116, 139, 0.3);
-  border: 2px solid #f1f5f9;
+  border: 2px solid #f8fafc;
 }
 
+html.light .bg-\[\#0b1220\]\/85,
+html.light .bg-\[\#0b1220\]\/95,
 html.light .bg-\[\#0b1220\]\/80 {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
 }
+
 html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/90,
 html.light .bg-slate-900 {
   background-color: #ffffff;
 }
+
+html.light .bg-slate-950\/40,
 html.light .bg-slate-950\/50,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/80,
 html.light .bg-slate-950\/90 {
-  background-color: #f8fafc;
+  background-color: #f1f5f9;
 }
+
 html.light .bg-slate-800,
+html.light .bg-slate-800\/80,
+html.light .bg-slate-800\/70,
+html.light .bg-slate-800\/60,
 html.light .bg-slate-800\/50,
 html.light .bg-slate-800\/40 {
-  background-color: #eef2f7;
+  background-color: #e2e8f0;
 }
+
 html.light .hover\:bg-slate-800\/70:hover,
+html.light .hover\:bg-slate-800\/60:hover,
 html.light .hover\:bg-slate-800\/40:hover,
+html.light .hover\:bg-slate-800\/30:hover,
 html.light .hover\:bg-slate-800:hover,
 html.light .hover\:bg-slate-700\/50:hover,
+html.light .hover\:bg-slate-700:hover,
 html.light .hover\:bg-slate-900:hover {
   background-color: #e2e8f0;
 }
 
 html.light .border-slate-800,
-html.light .border-slate-800\/80 {
+html.light .border-slate-800\/80,
+html.light .border-slate-800\/60 {
   border-color: #e2e8f0;
 }
 html.light .border-slate-700,
 html.light .border-slate-700\/70,
+html.light .border-slate-700\/80,
 html.light .border-slate-600 {
   border-color: #cbd5e1;
-}
-html.light .hover\:border-slate-700:hover {
-  border-color: #94a3b8;
-}
-html.light .hover\:border-slate-500:hover {
-  border-color: #64748b;
 }
 
 html.light .text-slate-100,
@@ -150,25 +171,15 @@ html.light .text-teal-400 {
 html.light .text-sky-400 {
   color: #0284c7;
 }
-html.light .hover\:text-rose-400:hover {
-  color: #e11d48;
-}
-
-html.light .from-blue-400.via-indigo-400.to-purple-400 {
-  background-image: linear-gradient(to right, #1d4ed8, #4338ca 50%, #7e22ce);
-}
 
 html.light .shadow-black\/20 {
   box-shadow:
     0 10px 15px -3px rgba(15, 23, 42, 0.06),
     0 4px 6px -4px rgba(15, 23, 42, 0.05);
 }
-html.light .shadow-black\/40 {
+html.light .shadow-black\/40,
+html.light .shadow-black\/50 {
   box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.12);
-}
-
-section[id] {
-  scroll-margin-top: 88px;
 }
 
 @media (max-width: 640px) {
@@ -177,7 +188,7 @@ section[id] {
   }
   table th,
   table td {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 }
